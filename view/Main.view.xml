@@ -34,7 +34,7 @@
 						<headerToolbar></headerToolbar>
 						<columns>
 							<Column width="12em">
-								<Text text="Resource-Modified-By-Nick" />
+								<Text text="Resource" />
 							</Column>
 						</columns>
 						<items>
