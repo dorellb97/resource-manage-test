@@ -1,0 +1,52 @@
+<mvc:View 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core" 
+	xmlns:c="sap.ui.commons" 
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:t="sap.ui.table" controllerName="pod.controller.Main" displayBlock="true">
+	<App>
+		<Page title="{i18n>page.title}" class="sapUiContentPadding" enableScrolling="false">
+			<customHeader>
+				<Bar>
+					<contentLeft>
+						<Button icon="sap-icon://nav-back" press="onNavBack" tooltip="{i18n>page.back}"/>
+					</contentLeft>
+					<contentLeft>
+						<ComboBox id="ComboSite" width="50%" items="{/modelSite}" value="ES01" placeholder="Site" change="changeSite">
+							<core:Item key="{SITE}" text="{SITE} " />
+						</ComboBox>
+					</contentLeft>
+					<contentMiddle>
+						<Title text="GRUPPO RISORSE" level="H1" class="titleText"/>
+					</contentMiddle>
+					<contentRight>
+						<Text text="{/username}" class="sapUiTinyMarginEnd"/>
+						<Button icon="sap-icon://log" tooltip="{i18n>page.logout}" press="onLogout"/>
+					</contentRight>
+				</Bar>
+			</customHeader>
+			<content>
+				<Button text="Gruppo Risorsa" press="onOpenDialog" class="sapUiSmallMarginEnd" icon="sap-icon://add"/>
+				<ScrollContainer width="100%" height="80%" vertical="true">
+					<Table id="resrce" inset="false" items="{/resrce}" sticky="HeaderToolbar,InfoToolbar,ColumnHeaders">
+						<headerToolbar></headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="Resource" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle" type="Navigation" press="handleRoute">
+								<cells>
+									<Text text="{RESOURCE_TYPE}" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</ScrollContainer>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

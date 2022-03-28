@@ -1,0 +1,83 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" controllerName="pod.controller.Resrce">
+	<App>
+		<Page title="{i18n>page.title}" class="sapUiContentPadding" enableScrolling="false">
+			<customHeader>
+				<Bar>
+					<contentLeft>
+						<Button icon="sap-icon://nav-back" press="onNavBack" tooltip="{i18n>page.back}"/>
+					</contentLeft>
+					<contentMiddle>
+						<Title id="resrce-type" level="H1" class="titleText"/>
+					</contentMiddle>
+					<contentRight>
+						<Text text="{/username}" class="sapUiTinyMarginEnd"/>
+						<Button icon="sap-icon://log" tooltip="{i18n>page.logout}" press="onLogout"/>
+					</contentRight>
+				</Bar>
+			</customHeader>
+			<content>
+				<FlexBox justifyContent="Center">
+					<Button class="m-0" type="Reject" icon="sap-icon://navigation-left-arrow" press="removeResrce" />
+					<Button class="m-0" type="Accept" icon="sap-icon://navigation-right-arrow" press="addResrce" />
+				</FlexBox>
+
+				<ScrollContainer height="80%" width="100%" vertical="true" focusable="true">
+					<FlexBox justifyContent="Start" alignItems="Start" height="100vh">
+						<Table width="100%" inset="false" items="{/available}" sticky="HeaderToolbar,InfoToolbar,ColumnHeaders">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<Title text="Risorse Disponibili" level="H2"/>
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<Column >
+									<Text text="Tipo Risorsa" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle" type="Active" press="handleAvailable">
+									<cells>
+										<Text text="{RESRCE}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+
+						<!-- <l:VerticalLayout>
+							<Button class="m-0" type="Accept" icon="sap-icon://navigation-right-arrow" press="addResrce" />
+							<Button class="m-0" type="Reject" icon="sap-icon://navigation-left-arrow" press="removeResrce" />
+						</l:VerticalLayout> -->
+
+						<Table width="100%" inset="false" items="{/assign}" sticky="HeaderToolbar,InfoToolbar,ColumnHeaders">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<Title text="Risorse Attive" level="H2"/>
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<Column width="12em">
+									<Text text="Risorsa" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle" type="Active" press="handleAvailable">
+									<cells>
+										<Text text="{RESRCE}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</FlexBox>
+				</ScrollContainer>
+
+			</content>
+		</Page>
+	</App>
+</core:FragmentDefinition>

@@ -1,0 +1,16 @@
+<core:FragmentDefinition 
+	xmlns="sap.m" 
+	xmlns:core="sap.ui.core">
+	<Dialog id="helloDialog" title="Creazione gruppo risorsa">
+		<Label text="Name" />
+		<Input id="nameInput" placeholder="Inserisci Nome Tipo Risorsa" liveChange="inputName" />
+		<Label text="Description" />
+		<Input id="descriptionInput" placeholder="Inserisci Descrizione Tipo Risorsa" liveChange="inputDescription" />
+		<beginButton>
+			<Button text="Chiudi" press="onCloseDialog"/>
+		</beginButton>
+		<endButton>
+			<Button id="myBTN" enabled="false" text="Crea" press="handleCreateType"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

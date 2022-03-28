@@ -1,0 +1,171 @@
+/*PAGE*/
+.sapMDialogScroll {
+  height: 100%;
+}
+
+/*TEXT*/
+.titleText {
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/*FONT*/
+.mediumFont {
+  font-size: 1.2rem !important;
+}
+
+.pino {
+  height: 100px;
+}
+
+.mediumFont > label {
+  font-size: 1.2rem !important;
+}
+
+.mediumFont .sapMInputBaseInner {
+  font-size: 1.2rem !important;
+}
+
+/*TAB CONTAINER*/
+.sapMTabStribContainer {
+  background: none;
+}
+
+.sapMTabStrip {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0rem;
+  height: 2.75rem;
+}
+
+.sapMTabStrip .sapMTSTabsContainer .sapMTSTabs .sapMTabStripItem {
+  padding: 0.75rem 1rem 0 1rem;
+}
+
+.sapMTabStrip
+  .sapMTSTabsContainer
+  .sapMTSTabs
+  .sapMTabStripItem
+  .sapMTSItemCloseBtnCnt {
+  display: none;
+}
+
+/*TILE*/
+.sapMTile,
+.sapMTileContent {
+  width: 300px !important;
+  height: 250px !important;
+}
+
+.sapMTile {
+  border: 0px !important;
+}
+
+.sapMStdTileTitle {
+  line-height: 2.1rem;
+  vertical-align: top;
+  text-align: left;
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sapMStdTileInfo {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+[data-color-cd="tileTransparent"] {
+}
+
+[data-color-cd="tileYellow"] {
+  background-color: #ffff99;
+}
+
+[data-color-cd="tileYellow"] .sapMText {
+  color: #32363a;
+}
+
+[data-color-cd="tileRed"] {
+  background-color: #ff9999;
+}
+
+[data-color-cd="tileRed"] .sapMText {
+  color: #32363a;
+}
+
+/*DIALOG BUTTON*/
+.halfSizeButton {
+  width: 49% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px !important;
+}
+
+.fullSizeButton {
+  width: 98% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px !important;
+}
+
+.sapMDialog .sapMTBSpacer {
+  display: none;
+}
+
+.sapMDialog .sapMIBar.sapMFooter-CTX {
+  justify-content: space-around;
+}
+
+.dialogSpacer {
+  display: flex !important;
+}
+
+.sapMBarPH {
+  justify-content: center !important;
+}
+
+/*CUSTOM BUTTON*/
+.customButton {
+  width: 7rem;
+  height: 5rem;
+  padding: 0;
+}
+
+.customButton > span {
+  width: 7rem;
+  height: 5rem;
+  box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.1),
+    0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.customButton > .sapMBtnInner.sapMBtnText.sapMBtnIconFirst {
+  padding: 0;
+}
+
+.customButton > .sapMBtnText > .sapMBtnIcon {
+  position: inherit;
+  float: none;
+  width: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.customButton > .sapMBtnInner.sapMBtnText .sapMBtnIcon:before {
+  width: 2.5rem;
+}
+
+.m-0 {
+  margin: 5px 25px;
+}
+
+.sapMDialog>.sapMDialogSection{
+padding: 20px
+}
